@@ -1,0 +1,20 @@
+
+
+<div class="betterForm">
+
+<h3>Create a new vote</h3>
+<%= form_for @vote do |form| %>
+  
+    <%= form.label :question, 'Enter your question:'  %>
+    <%= form.text_field :question, class: 'form-control' %>
+    <br>
+    <%= form.label :answer1, 'Enter the first answer:' %>
+    <%= form.text_field :answer1, class: 'form-control' %>
+    <br>
+    <%= form.label :answer2, 'Enter the second answer:' %>
+    <%= form.text_field :answer2, class: 'form-control' %>
+    <br>
+    <%= form.submit 'Create a vote!', class: 'btn btn-primary' %>
+
+<% end %>
+</div>

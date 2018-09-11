@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VoteCounter</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+
+
+  <body> 
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link <% if controller.controller_name == "votes" && controller.action_name == "new" %>active<%end%>" href="/new">Create a Vote</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <% if controller.controller_name == "votes" && controller.action_name == "vote" %>active<%end%>" href="/vote">Vote!</a>
+      </li>
+    </ul>
+</nav>
+
+    <%= yield %>
+  </body>
+</html>
